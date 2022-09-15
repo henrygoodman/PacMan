@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3bec3fabdd425094fbe303c2afed1c2d
+guid: 404d17e77c463f14588f327d2f3164db
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,106 +106,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GhostSprite_0
+      name: WallSprite_0
       rect:
         serializedVersion: 2
         x: 0
         y: 512
         width: 256
         height: 256
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 108f2487a2370d24b8152bafbb2fb813
-      internalID: 2062003211
+      spriteID: 71fc85681d9765647a5dba32af9ef263
+      internalID: -63864341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSprite_1
+      name: WallSprite_1
       rect:
         serializedVersion: 2
         x: 256
         y: 512
         width: 256
         height: 256
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d1c506788c0741479dd222c6c04ad79
-      internalID: 1647426419
+      spriteID: ebb2054358177ba478203c27d69c5e43
+      internalID: -2003511123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSprite_2
+      name: WallSprite_2
       rect:
         serializedVersion: 2
         x: 0
         y: 256
         width: 256
         height: 256
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 541854d38ae161f4d9763f3c1a43b664
-      internalID: 1826995529
+      spriteID: 37627ca128b401346adad90dc4ab691e
+      internalID: -463980217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSprite_3
+      name: WallSprite_3
       rect:
         serializedVersion: 2
         x: 256
         y: 256
         width: 256
         height: 256
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7af5b32e895da1148b400b9435885237
-      internalID: -1309879584
+      spriteID: 1f99b0667dae10e4abf7767661328b5a
+      internalID: -1264107794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSprite_4
+      name: WallSprite_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 256
         height: 256
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a05fccf2fd8ca41438040cf371554a7f
-      internalID: 1321594213
+      spriteID: 40122baf2e541914ab23754b1c45353b
+      internalID: 1381306069
       vertices: []
       indices: 
       edges: []
@@ -221,11 +221,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GhostSprite_0: 2062003211
-      GhostSprite_2: 1826995529
-      GhostSprite_4: 1321594213
-      GhostSprite_3: -1309879584
-      GhostSprite_1: 1647426419
+      WallSprite_1: -2003511123
+      WallSprite_2: -463980217
+      WallSprite_0: -63864341
+      WallSprite_3: -1264107794
+      WallSprite_4: 1381306069
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
