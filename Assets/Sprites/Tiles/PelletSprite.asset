@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PacmanSprite_0
+  m_Name: PelletSprite
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -1823823798, guid: 29091dce7f301884ea45fec28f09f31d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 232f4c4c7943a5a40861a617e58fa03a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
