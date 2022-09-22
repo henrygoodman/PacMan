@@ -455,6 +455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ManualLevel4
       objectReference: {fileID: 0}
+    - target: {fileID: 8854586455517431387, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
+      propertyPath: m_TagString
+      value: Quadrant
+      objectReference: {fileID: 0}
     - target: {fileID: 8864883157819361347, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
       propertyPath: m_TileOrientation
       value: 0
@@ -1362,6 +1366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 283749507}
   - component: {fileID: 283749506}
+  - component: {fileID: 283749508}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -1401,6 +1406,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &283749508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283749505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ea3f543282f6341833276388334694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Children: []
+  tiles:
+  - {fileID: 11400000, guid: c18f0855323f2b14a827ac3016c1682a, type: 2}
+  - {fileID: 11400000, guid: b7928dc1a0c16034eb71764563174007, type: 2}
+  - {fileID: 11400000, guid: 3ebaaf36c51512e4db8ceb9c775e48f0, type: 2}
+  - {fileID: 11400000, guid: cb1ba2f6300c70e479b4b60623bcac86, type: 2}
+  - {fileID: 11400000, guid: 651f356848f971944b0718d4206bbc64, type: 2}
+  - {fileID: 11400000, guid: c18f0855323f2b14a827ac3016c1682a, type: 2}
+  - {fileID: 11400000, guid: 37007094de9f9eb4db4bf7a6620dab50, type: 2}
+  - {fileID: 11400000, guid: 9a88bd79c04f690419ac0f23c41439e1, type: 2}
 --- !u!1 &289582896
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,6 +3096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ManualLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 8854586455517431387, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
+      propertyPath: m_TagString
+      value: Quadrant1
+      objectReference: {fileID: 0}
     - target: {fileID: 8864883157819361347, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
       propertyPath: m_TileOrientation
       value: 0
@@ -3869,6 +3900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quadrant1
       objectReference: {fileID: 0}
+    - target: {fileID: 9174119046022492505, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
+      propertyPath: m_TagString
+      value: Quadrant1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
@@ -3902,7 +3937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7517748987838104956, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0
+      value: 444
       objectReference: {fileID: 0}
     - target: {fileID: 7517748987838104956, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3947,6 +3982,10 @@ PrefabInstance:
     - target: {fileID: 8854586455517431387, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
       propertyPath: m_Name
       value: ManualLevel2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854586455517431387, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
+      propertyPath: m_TagString
+      value: Quadrant
       objectReference: {fileID: 0}
     - target: {fileID: 8864883157819361347, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
       propertyPath: m_TileOrientation
@@ -5003,6 +5042,10 @@ PrefabInstance:
     - target: {fileID: 8854586455517431387, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
       propertyPath: m_Name
       value: ManualLevel3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854586455517431387, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
+      propertyPath: m_TagString
+      value: Quadrant
       objectReference: {fileID: 0}
     - target: {fileID: 8864883157819361347, guid: 9e640b81c831f3e439650314ffaefb72, type: 3}
       propertyPath: m_TileOrientation
