@@ -14,7 +14,6 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField]
     private Tile[] tiles;
 
-    int offset = -20;
 
     int[,] levelMap =
         {
@@ -35,8 +34,13 @@ public class LevelGenerator : MonoBehaviour
         {0,0,0,0,0,0,5,0,0,0,4,0,0,0},
         };
 
+    int xoffset, yoffset;
+
     void Start()
     {
+        yoffset = 19 - levelMap.GetLength(0); // Not exactly sure why but these are the exact offsets needed for any size
+        xoffset = -13 + levelMap.GetLength(1);
+
         tilemap1 = gameObject.transform.Find("ManualLevel").transform.Find("Quadrant1").GetComponent<Tilemap>();
         tilemap2 = gameObject.transform.Find("ManualLevel2").transform.Find("Quadrant2").GetComponent<Tilemap>();
         tilemap3 = gameObject.transform.Find("ManualLevel3").transform.Find("Quadrant3").GetComponent<Tilemap>();
@@ -50,15 +54,15 @@ public class LevelGenerator : MonoBehaviour
         int n1, n2, n3, n4;
 
         // Set Quadrant 1 Tiles.
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < levelMap.GetLength(0); i++)
         {
-            for (int j = 0; j < 14; j++)
+            for (int j = 0; j < levelMap.GetLength(1); j++)
             {
                 if (levelMap[i, j] != 0)
                 {
                     n1 = (i > 0) ? levelMap[i-1, j]: -1;
-                    n2 = (j < 13) ? levelMap[i, j+1]: -1;
-                    n3 = (i < 14) ? levelMap[i+1, j]: -1;
+                    n2 = (j < levelMap.GetLength(1) - 1) ? levelMap[i, j+1]: -1;
+                    n3 = (i < levelMap.GetLength(0) - 1) ? levelMap[i+1, j]: -1;
                     n4 = (j > 0) ? levelMap[i, j-1]: -1;
                     int[] neighbours = { n1, n2, n3, n4 };
                     int n = calculateRotation(levelMap[i, j], neighbours);
@@ -81,23 +85,22 @@ public class LevelGenerator : MonoBehaviour
                             matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, n), new Vector3(1.0f, 1.0f, 1));
                         }
                     }
-                    tilemap1.SetTile(new Vector3Int(j - 1, offset + 15 - i + 1, 0), tiles[levelMap[i, j]]);
-                    tilemap1.SetTransformMatrix(new Vector3Int(j - 1, offset + 15 - i + 1, 0), matrix);
-                    Debug.Log(levelMap[i, j] + " " + n);
+                    tilemap1.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
+                    tilemap1.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
                 }
             }
         }
 
         // Set Quadrant 2 Tiles.
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < levelMap.GetLength(0); i++)
         {
-            for (int j = 13; j >= 0; j--)
+            for (int j = levelMap.GetLength(1) - 1; j >= 0; j--)
             {
                 if (levelMap[i, j] != 0)
                 {
                     n1 = (i > 0) ? levelMap[i - 1, j] : -1;
-                    n2 = (j < 13) ? levelMap[i, j + 1] : -1;
-                    n3 = (i < 14) ? levelMap[i + 1, j] : -1;
+                    n2 = (j < levelMap.GetLength(1) - 1) ? levelMap[i, j + 1] : -1;
+                    n3 = (i < levelMap.GetLength(0) - 1) ? levelMap[i + 1, j] : -1;
                     n4 = (j > 0) ? levelMap[i, j - 1] : -1;
                     int[] neighbours = { n1, n2, n3, n4 };
                     int n = calculateRotation(levelMap[i, j], neighbours);
@@ -120,23 +123,23 @@ public class LevelGenerator : MonoBehaviour
                             matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, n), new Vector3(1.0f, 1.0f, 1));
                         }
                     }
-                    tilemap2.SetTile(new Vector3Int(j - 1, offset + 15 - i + 1, 0), tiles[levelMap[i, j]]);
-                    tilemap2.SetTransformMatrix(new Vector3Int(j - 1, offset + 15 - i + 1, 0), matrix);
+                    tilemap2.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
+                    tilemap2.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
                 }
 
             }
         }
 
         // Set Quadrant 3 Tiles.
-        for (int i = 14; i >= 0; i--)
+        for (int i = levelMap.GetLength(0) -1; i >= 0; i--)
         {
-            for (int j = 0; j < 14; j++)
+            for (int j = 0; j < levelMap.GetLength(1); j++)
             {
                 if (levelMap[i, j] != 0)
                 {
                     n1 = (i > 0) ? levelMap[i - 1, j] : -1;
-                    n2 = (j < 13) ? levelMap[i, j + 1] : -1;
-                    n3 = (i < 14) ? levelMap[i + 1, j] : -1;
+                    n2 = (j < levelMap.GetLength(1) - 1) ? levelMap[i, j + 1] : -1;
+                    n3 = (i < levelMap.GetLength(0) - 1) ? levelMap[i + 1, j] : -1;
                     n4 = (j > 0) ? levelMap[i, j - 1] : -1;
                     int[] neighbours = { n1, n2, n3, n4 };
                     int n = calculateRotation(levelMap[i, j], neighbours);
@@ -160,22 +163,22 @@ public class LevelGenerator : MonoBehaviour
                         }
                     }
 
-                    tilemap3.SetTile(new Vector3Int(j - 1, offset + 15 - i + 1, 0), tiles[levelMap[i, j]]);
-                    tilemap3.SetTransformMatrix(new Vector3Int(j - 1, offset + 15 - i + 1, 0), matrix);
+                    tilemap3.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
+                    tilemap3.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
                 }
             }
         }
 
         // Set Quadrant 4 Tiles.
-        for (int i = 14; i >= 0; i--)
+        for (int i = levelMap.GetLength(0) - 1; i >= 0; i--)
         {
-            for (int j = 13; j >= 0; j--)
+            for (int j = levelMap.GetLength(1) - 1; j >= 0; j--)
             {
                 if (levelMap[i, j] != 0)
                 {
                     n1 = (i > 0) ? levelMap[i - 1, j] : -1;
-                    n2 = (j < 13) ? levelMap[i, j + 1] : -1;
-                    n3 = (i < 14) ? levelMap[i + 1, j] : -1;
+                    n2 = (j < levelMap.GetLength(1) - 1) ? levelMap[i, j + 1] : -1;
+                    n3 = (i < levelMap.GetLength(0) - 1) ? levelMap[i + 1, j] : -1;
                     n4 = (j > 0) ? levelMap[i, j - 1] : -1;
                     int[] neighbours = { n1, n2, n3, n4 };
                     int n = calculateRotation(levelMap[i, j], neighbours);
@@ -199,8 +202,8 @@ public class LevelGenerator : MonoBehaviour
                         }
                     }
 
-                    tilemap4.SetTile(new Vector3Int(j - 1, offset + 15 - i + 1, 0), tiles[levelMap[i, j]]);
-                    tilemap4.SetTransformMatrix(new Vector3Int(j - 1, offset + 15 - i + 1, 0), matrix);
+                    tilemap4.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
+                    tilemap4.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
                 }
             }
         }
