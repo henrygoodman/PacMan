@@ -85,8 +85,11 @@ public class LevelGenerator : MonoBehaviour
                             matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, n), new Vector3(1.0f, 1.0f, 1));
                         }
                     }
-                    tilemap1.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
-                    tilemap1.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
+                    if (levelMap[i, j] != 6)
+                    {
+                        tilemap1.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
+                        tilemap1.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
+                    }
                 }
             }
         }
@@ -123,8 +126,11 @@ public class LevelGenerator : MonoBehaviour
                             matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, n), new Vector3(1.0f, 1.0f, 1));
                         }
                     }
-                    tilemap2.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
-                    tilemap2.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
+                    if (levelMap[i, j] != 6)
+                    {
+                        tilemap2.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
+                        tilemap2.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
+                    }
                 }
 
             }
@@ -163,8 +169,11 @@ public class LevelGenerator : MonoBehaviour
                         }
                     }
 
-                    tilemap3.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
-                    tilemap3.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
+                    if (levelMap[i, j] != 6)
+                    {
+                        tilemap3.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
+                        tilemap3.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
+                    }
                 }
             }
         }
@@ -202,8 +211,11 @@ public class LevelGenerator : MonoBehaviour
                         }
                     }
 
-                    tilemap4.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
-                    tilemap4.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
+                    if (levelMap[i, j] != 6)
+                    {
+                        tilemap4.SetTile(new Vector3Int(j - xoffset, -yoffset - i, 0), tiles[levelMap[i, j]]);
+                        tilemap4.SetTransformMatrix(new Vector3Int(j - xoffset, -yoffset - i, 0), matrix);
+                    }
                 }
             }
         }
